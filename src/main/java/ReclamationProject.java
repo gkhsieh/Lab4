@@ -13,7 +13,7 @@ public class ReclamationProject
     static String subFinder(String a, String b)
     {
 
-        //swap a and b if a is longer
+        //makes string a the shorter string
         if (a.length() > b.length())
         {
             String temp = a;
@@ -29,14 +29,15 @@ public class ReclamationProject
         {
             for (int j = a.length() - i; j > 0; j--)
             {
-                for (int k = 0; k < b.length()- j; k++)
+                for (int k = 0; k < b.length() - j; k++)
                 {
-                    sub = (a.regionMatches(i, b, k, j) && j > sub.length()) ? a.substring(i,i + j) : sub;
+                    sub = (a.regionMatches(i, b, k, j) && j > sub.length()) ? a.substring(i,i + j) : sub; //searches for
                 }
             }
         }
 
         //returns the string
         return sub;
-        }
+
+    }
 }
